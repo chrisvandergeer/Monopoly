@@ -23,11 +23,6 @@ namespace Monopoly.AI
             return gebeurtenis;
         }
 
-        private bool IsHypotheekNemenEenOptie(Monopolyspel spel)
-        {
-            return spel.HuidigeSpeler.BeurtGebeurtenissen.BevatGebeurtenis(Gebeurtenisnamen.NEEM_HYPOTHEEK);
-        }
-
         private bool IsUitvoerbaar(Monopolyspel spel, string gebeurtenisnaam)
         {
             Speler speler = spel.HuidigeSpeler;
