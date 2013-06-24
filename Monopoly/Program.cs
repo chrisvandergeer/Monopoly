@@ -6,6 +6,7 @@ using Monopoly.domein;
 using Monopoly.domein.gebeurtenissen;
 using Monopoly.AI;
 using Monopoly.domein.velden;
+using Monopoly.domein.labels;
 
 namespace Monopoly
 {
@@ -15,7 +16,8 @@ namespace Monopoly
         private static SpelController controller = new SpelController();
 
         static void Main(string[] args)
-        {   
+        {
+            aiDecider.AddDecision(Gebeurtenisnamen.KOOP_HUIS, new KoopHuisDecision());
             Monopolyspel spel = controller.MaakSpel();
             controller.VoegSpelerToe("Chris");
             controller.VoegSpelerToe("Roel");
@@ -39,9 +41,7 @@ namespace Monopoly
             Console.WriteLine("Aantal gespeelde rondes: " + i / spel.Spelers.Count);
             Console.WriteLine("</pre>");
         }
-
-
-
+        
         private static void SpeelSpelersRonde(Monopolyspel spel)
         {
             Console.WriteLine(Gebeurtenisresult.Create(spel.HuidigeSpeler, "is aan de beurt").ResultTekst);

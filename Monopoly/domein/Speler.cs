@@ -10,7 +10,7 @@ namespace Monopoly.domein
     public class Speler
     {
         public Monopolyspel Spel                        { get; set; }
-        public Veld Positie                            { get; set; }        
+        public Veld Positie                             { get; set; }        
         public string Spelernaam                        { get; private set; }
         public Gebeurtenislijst BeurtGebeurtenissen     { get; set; }
         public Bezittingen Bezittingen                  { get; set; }
@@ -58,6 +58,7 @@ namespace Monopoly.domein
             BeurtGebeurtenissen.VoegGebeurtenisToe(new GooiDobbelstenen());
             BeurtGebeurtenissen.VoegGebeurtenisToe(new LosHypotheekAf());
             BeurtGebeurtenissen.VoegGebeurtenisToe(new KoopHuis());
+            BeurtGebeurtenissen.VoegGebeurtenisToe(new VerkoopHuis());
             BeurtGebeurtenissen.VoegGebeurtenisToe(new NeemHypotheek());
             BeurtGebeurtenissen.VoegGebeurtenisToe(new EindeBeurt());
             BeurtGebeurtenissen.VoegGebeurtenisToe(new EindeSpel());

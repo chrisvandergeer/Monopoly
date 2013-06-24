@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\AIDecider.cs" />
+    <Compile Include="AI\IDecision.cs" />
+    <Compile Include="AI\DefaultDecision.cs" />
+    <Compile Include="AI\KoopHuisDecision.cs" />
     <Compile Include="builders\AlgemeenFondsKaartenbuilder.cs" />
     <Compile Include="builders\Gebeurtenisveldbuilder.cs" />
     <Compile Include="builders\StationEnNutsBuilder.cs" />
