@@ -27,13 +27,14 @@ namespace Monopoly.domein
             Spelers = new List<Speler>();
         }
 
-        public void VoegSpelerToe(string spelersnaam)
+        public Speler VoegSpelerToe(string spelersnaam)
         {
             Speler nieuweSpeler = new Speler(spelersnaam, this);
             if (Spelers.Contains(nieuweSpeler))
                 throw new ApplicationException("Speler met deze naam doet al mee");
             Spelers.Add(nieuweSpeler);
             Bord.Plaats(nieuweSpeler);
+            return nieuweSpeler;
         }
 
         public void Start()

@@ -16,7 +16,7 @@ namespace Monopoly.domein.gebeurtenissen
 
         public override bool IsUitvoerbaar(Speler speler)
         {
-            throw new NotImplementedException();
+            return speler.Bezittingen.HeeftBebouwdeStraten();
         }
 
         public override void Voeruit(Speler speler)

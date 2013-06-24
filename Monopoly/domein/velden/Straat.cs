@@ -69,7 +69,10 @@ namespace Monopoly.domein.velden
         {
             if (Eigenaar == null)
                 return false;
-            return Stad.BezitStad(Eigenaar) && AantalHuizen < 4 && PrijsVoorEenHuis <= Eigenaar.Bezittingen.Kasgeld;
+            return Stad.BezitStad(Eigenaar) 
+                && AantalHuizen < 4 
+                && !Hypotheek.IsOnderHypotheek
+                && PrijsVoorEenHuis <= Eigenaar.Bezittingen.Kasgeld;
         }
 
         public int BepaalHuurprijs()

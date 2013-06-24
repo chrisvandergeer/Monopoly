@@ -9,13 +9,11 @@ namespace Monopoly.domein
     public class Bezittingen
     {
         public int Kasgeld { get; private set; }
-        //public List<Straat> Straten { get; private set; }
         public List<IHypotheekveld> Hypotheekvelden { get; private set; }
 
         public Bezittingen()
         {
             Kasgeld = 1500;
-            //Straten = new List<Straat>();
             Hypotheekvelden = new List<IHypotheekveld>();
         }
 
@@ -61,16 +59,30 @@ namespace Monopoly.domein
             return Straten().FindAll(straat => straat.KanBebouwdWordenMetHuis());
         }
 
+        /// <returns>De som van het aantal velden in bezit</returns>
         public int AantalHypotheekvelden()
         {
             return Hypotheekvelden.Count;
         }
 
+        /// <returns>De som van alle velden met een hypotheek</returns>
         public int AantalVeldenMetHypotheek()
         {
             int result = Hypotheekvelden.Count(item => item.Hypotheek.IsOnderHypotheek);
             return result;
         }
 
+        /// <returns>true indien er bebouwde straten zijn</returns>
+        public bool HeeftBebouwdeStraten()
+        {
+            return GeefBebouwdeStraten().Count > 0;
+
+        }
+
+        /// <returns>Lijst met bebouwde straten</returns>
+        public List<Straat> GeefBebouwdeStraten()
+        {
+            return GeefBebouwbareStraten().FindAll(straat => straat.AantalHuizen > 0);
+        }
     }
 }

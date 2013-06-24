@@ -82,7 +82,7 @@
     <Compile Include="domein\Stad.cs" />
     <Compile Include="domein\IVeld.cs" />
     <Compile Include="domein\velden\IVeld.cs" />
-    <Compile Include="domein\velden\Hypotheekveld.cs" />
+    <Compile Include="domein\velden\Bedrijf.cs" />
     <Compile Include="domein\velden\Veld.cs" />
     <Compile Include="domein\velden\IHypotheekveld.cs" />
     <Compile Include="domein\velden\Gebeurtenisveld.cs" />

@@ -1,5 +1,5 @@
 ﻿[Monopolyspel{bg:blue}]++->1[Spelbord{bg:blue}]
-[Spelbord]++->40[Veld{bg:green}]
+[Spelbord]++->40[IVeld{bg:green}]
 [IHypotheekveld{bg:yellow}]^-.-[Straat{bg:blue}]
 [Veld]^-[Straat]
 [IVeld{bg:yellow}]^-[IHypotheekveld]
