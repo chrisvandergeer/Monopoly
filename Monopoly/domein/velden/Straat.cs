@@ -69,10 +69,9 @@ namespace Monopoly.domein.velden
         {
             if (Eigenaar == null)
                 return false;
-            return Stad.BezitStad(Eigenaar) 
-                && AantalHuizen < 4 
-                && !Hypotheek.IsOnderHypotheek
-                && PrijsVoorEenHuis <= Eigenaar.Bezittingen.Kasgeld;
+            return Stad.BezitStad(Eigenaar)
+                && AantalHuizen < 4
+                && !Hypotheek.IsOnderHypotheek;
         }
 
         public int BepaalHuurprijs()
@@ -88,6 +87,14 @@ namespace Monopoly.domein.velden
                 return true;
             }
             return false;
+        }
+
+         public void VerkoopHuis()
+        {
+            if (AantalHuizen < 0)
+                throw new ApplicationException("Er kan geen huis verkocht worden op een straat waar geen huizen staan");
+            Eigenaar.Bezittingen.OntvangGeld(PrijsVoorEenHuis / 2);
+            AantalHuizen--;
         }
     }
 }

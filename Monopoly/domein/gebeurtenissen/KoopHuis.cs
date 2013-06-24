@@ -30,11 +30,9 @@ namespace Monopoly.domein.gebeurtenissen
         public override bool IsUitvoerbaar(Speler speler)
         {
             Straat straat = GeefKandidaatstraat(speler);
-            if (straat != null)
-            {
-                return speler.Bezittingen.Kasgeld >= straat.PrijsVoorEenHuis;
-            }
-            return false;
+            if (speler.BeurtGebeurtenissen.BevatNogUitTeVoerenVerplichteGebeurtenissen() || straat == null)
+                return false;
+            return speler.Bezittingen.Kasgeld >= straat.PrijsVoorEenHuis;
         }
 
         public override void Voeruit(Speler speler)
