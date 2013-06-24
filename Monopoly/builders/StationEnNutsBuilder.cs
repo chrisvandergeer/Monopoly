@@ -13,39 +13,39 @@ namespace Monopoly.builders
     {
         private static int AANKOOPPRIJS = 200;
 
-        public Hypotheekveld buildStationNoord()
+        public Bedrijf buildStationNoord()
         {
             return build(Veldnamen.STATION_NOORD);
         }
 
-        public Hypotheekveld buildStationOost()
+        public Bedrijf buildStationOost()
         {
             return build(Veldnamen.STATION_OOST);
         }
 
-        public Hypotheekveld buildStationZuid()
+        public Bedrijf buildStationZuid()
         {
             return build(Veldnamen.STATION_ZUID);
         }
 
-        public Hypotheekveld buildStationWest()
+        public Bedrijf buildStationWest()
         {
             return build(Veldnamen.STATION_WEST);
         }
 
-        private Hypotheekveld build(string stationsNaam)
+        private Bedrijf build(string stationsNaam)
         {
-            return new Hypotheekveld(stationsNaam, AANKOOPPRIJS, new Stationhuur());
+            return new Bedrijf(stationsNaam, AANKOOPPRIJS, new Stationhuur());
         }
 
-        public Hypotheekveld buildNutsWaterleiding()
+        public Bedrijf buildNutsWaterleiding()
         {
-            return new Hypotheekveld(Veldnamen.NUTS_WATERLEIDING, 150, new NutsbedrijfHuur());
+            return new Bedrijf(Veldnamen.NUTS_WATERLEIDING, 150, new NutsbedrijfHuur());
         }
 
-        public Hypotheekveld buildNutsElektriciteit()
+        public Bedrijf buildNutsElektriciteit()
         {
-            return new Hypotheekveld(Veldnamen.NUTS_ELEKTRICITEIT, 150, new NutsbedrijfHuur());
+            return new Bedrijf(Veldnamen.NUTS_ELEKTRICITEIT, 150, new NutsbedrijfHuur());
         }
         
     }

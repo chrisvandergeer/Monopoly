@@ -7,7 +7,7 @@ using Monopoly.domein.gebeurtenissen;
 
 namespace Monopoly.domein.velden
 {
-    public class Hypotheekveld : Veld, IHypotheekveld
+    public class Bedrijf : Veld, IHypotheekveld
     {
         private IHuurprijsBepaler HuurprijsBepaler { get; set; }
         public Hypotheek Hypotheek { get; private set; }
@@ -15,7 +15,7 @@ namespace Monopoly.domein.velden
         public int Koopprijs    { get; private set; }
         public Speler Eigenaar  { get; private set; }
 
-        public Hypotheekveld(string naam, int koopprijs, IHuurprijsBepaler huurprijsBepaler)
+        public Bedrijf(string naam, int koopprijs, IHuurprijsBepaler huurprijsBepaler)
             : base(naam)
         {
             Koopprijs = koopprijs;
