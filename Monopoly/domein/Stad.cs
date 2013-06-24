@@ -30,5 +30,15 @@ namespace Monopoly.domein
         {
             return Straten.Count(straat => speler.Equals(straat.Eigenaar)) == Straten.Count;
         }
+
+        public bool BezitHelft(Speler speler)
+        {
+            return Straten.Count(s => speler.Equals(s.Eigenaar)) > Straten.Count / 2;
+        }
+
+        public bool IsAllesVerkocht()
+        {
+            return Straten.Count(s => s.Eigenaar != null) == Straten.Count;
+        }
     }
 }

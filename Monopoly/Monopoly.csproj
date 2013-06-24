@@ -44,10 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\AIDecider.cs" />
+    <Compile Include="AI\DoeBodOpAndermansStraatDecision.cs" />
+    <Compile Include="AI\IDecision.cs" />
+    <Compile Include="AI\DefaultDecision.cs" />
+    <Compile Include="AI\KoopHuisDecision.cs" />
     <Compile Include="builders\AlgemeenFondsKaartenbuilder.cs" />
     <Compile Include="builders\Gebeurtenisveldbuilder.cs" />
     <Compile Include="builders\StationEnNutsBuilder.cs" />
     <Compile Include="domein\gebeurtenissen\BetaalGeld.cs" />
+    <Compile Include="domein\gebeurtenissen\DoeBodOpAndersmansStraat.cs" />
     <Compile Include="domein\gebeurtenissen\GebeurtenisStapel.cs" />
     <Compile Include="domein\gebeurtenissen\VerkoopHuis.cs" />
     <Compile Include="domein\gebeurtenissen\VerplaatsSpeler.cs" />

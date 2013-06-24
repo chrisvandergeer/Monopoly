@@ -48,7 +48,8 @@ namespace Monopoly.domein.velden
         /// <returns>true indien speler voldoende geld had en de koop gelukt is</returns>
         public bool Verkoop(Speler koper)
         {
-            if (koper.Bezittingen.Betaal(Koopprijs))
+            Speler begunstigde = Eigenaar == null ? Monopolyspel.BANK : Eigenaar;
+            if (koper.Bezittingen.Betaal(Koopprijs, begunstigde))
             {
                 Eigenaar = koper;
                 koper.Bezittingen.Hypotheekvelden.Add(this);
