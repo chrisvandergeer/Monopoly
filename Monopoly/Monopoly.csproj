@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAAAC797-6C67-4B32-9804-975396C0303C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monopoly</RootNamespace>
+    <AssemblyName>Monopoly</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\AIDecider.cs" />
+    <Compile Include="builders\AlgemeenFondsKaartenbuilder.cs" />
+    <Compile Include="builders\Gebeurtenisveldbuilder.cs" />
+    <Compile Include="builders\StationEnNutsBuilder.cs" />
+    <Compile Include="domein\gebeurtenissen\BetaalGeld.cs" />
+    <Compile Include="domein\gebeurtenissen\GebeurtenisStapel.cs" />
+    <Compile Include="domein\gebeurtenissen\VerkoopHuis.cs" />
+    <Compile Include="domein\gebeurtenissen\VerplaatsSpeler.cs" />
+    <Compile Include="domein\gebeurtenissen\Vrij.cs" />
+    <Compile Include="domein\huur\NutsbedrijfHuur.cs" />
+    <Compile Include="domein\huur\Stationhuur.cs" />
+    <Compile Include="domein\Hypotheek.cs" />
+    <Compile Include="domein\Bezittingen.cs" />
+    <Compile Include="domein\Dobbelsteen.cs" />
+    <Compile Include="domein\Gebeurtenislijst.cs" />
+    <Compile Include="domein\gebeurtenissen\EindeSpel.cs" />
+    <Compile Include="domein\gebeurtenissen\BetaalHuur.cs" />
+    <Compile Include="domein\gebeurtenissen\EindeBeurt.cs" />
+    <Compile Include="domein\huur\IHuurprijsBepaler.cs" />
+    <Compile Include="domein\gebeurtenissen\LosHypotheekAf.cs" />
+    <Compile Include="domein\labels\GebeurtenisMelding.cs" />
+    <Compile Include="domein\labels\Gebeurtenisnamen.cs" />
+    <Compile Include="domein\gebeurtenissen\GooiDobbelstenen.cs" />
+    <Compile Include="domein\gebeurtenissen\KoopHuis.cs" />
+    <Compile Include="domein\gebeurtenissen\KoopStraat.cs" />
+    <Compile Include="domein\gebeurtenissen\NeemHypotheek.cs" />
+    <Compile Include="domein\huur\Straathuur.cs" />
+    <Compile Include="domein\labels\Stadnamen.cs" />
+    <Compile Include="domein\labels\Veldnamen.cs" />
+    <Compile Include="domein\Spelbord.cs" />
+    <Compile Include="domein\IGebeurtenis.cs" />
+    <Compile Include="domein\Gebeurtenisresult.cs" />
+    <Compile Include="domein\gebeurtenissen\Gebeurtenis.cs" />
+    <Compile Include="domein\gebeurtenissen\OntvangGeld.cs" />
+    <Compile Include="domein\Monopolyspel.cs" />
+    <Compile Include="domein\Speler.cs" />
+    <Compile Include="domein\Stad.cs" />
+    <Compile Include="domein\IVeld.cs" />
+    <Compile Include="domein\velden\IVeld.cs" />
+    <Compile Include="domein\velden\Hypotheekveld.cs" />
+    <Compile Include="domein\velden\Veld.cs" />
+    <Compile Include="domein\velden\IHypotheekveld.cs" />
+    <Compile Include="domein\velden\Gebeurtenisveld.cs" />
+    <Compile Include="domein\velden\Straat.cs" />
+    <Compile Include="domein\Worp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpelController.cs" />
+    <Compile Include="builders\Straatbuilder.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
